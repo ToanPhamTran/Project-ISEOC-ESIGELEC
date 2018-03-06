@@ -6,7 +6,7 @@
  * library for the orders
  */
 int i=0;
-void InitUART(void)
+void InitUART(void) 
 	{
 		/*
 		 * Comunnication UART is located on P1.1 or P1.2
