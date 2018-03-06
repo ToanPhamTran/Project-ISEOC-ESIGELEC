@@ -1,3 +1,3 @@
 # Project-ISEOC-ESIGELEC
-project 2018 -Robot ISEOC
-bonjour
+projet Conception d'un Robot - 2eme année cycle ingénieur dominante ISE-OC - 2018
+
