@@ -1,7 +1,7 @@
 #include <msp430.h> 
 
 /*
- * main.c
+ * main.c 
  */
 unsigned char flag;
 void initport()
