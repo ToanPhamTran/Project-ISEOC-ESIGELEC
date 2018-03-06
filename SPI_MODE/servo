@@ -16,8 +16,8 @@ void initport()
 	P1DIR |= BIT3; // on set le cable jaune en sortie
 	P1SEL |=BIT3;
 
-	P1IES |= BIT3; // on force le bit numéro 3 à zéro. Qui permet de détecter le front descendant
-	P1IFG &= (~BIT3); // vérifie que le flag est à zéro
+	P1IES |= BIT3; // on force le bit numÃ©ro 3 Ã  zÃ©ro. Qui permet de dÃ©tecter le front descendant
+	P1IFG &= (~BIT3); // vÃ©rifie que le flag est Ã  zÃ©ro
 
 }
 
