@@ -56,7 +56,7 @@ void Init_moteur();
 /*...................................................................................*/
 /* void Avancer(unsigned int vM, unsigned int vA, unsigned int time)                                                                  */
 /*...................................................................................*/
-/* Description : Permet au véhicule d'avancer                                     */
+/* Description : Permet au vÃ©hicule d'avancer                                     */
 /* Inputs :                                                                          */
 /*      - unsigned int vM, unsigned int vA, unsigned int time                                                                  */
 /* Output :                                                                          */
@@ -80,7 +80,7 @@ void Tourner_gauche(unsigned int vM, unsigned int vA);
 /*...................................................................................*/
 /* void Tourner_droite(unsigned int vM, unsigned int vA)                                                            */
 /*...................................................................................*/
-/* Description : Permet azu robot de tourner à droite                                     */
+/* Description : Permet azu robot de tourner Ã  droite                                     */
 /* Inputs :                                                                          */
 /*      - unsigned int vM, unsigned int vA                                                                */
 /* Output :                                                                          */
@@ -92,7 +92,7 @@ void Tourner_droite(unsigned int vM, unsigned int vA);
 /*...................................................................................*/
 /* void Tourner_90_D()                                                               */
 /*...................................................................................*/
-/* Description : Rotation de 90° a droite du robot                                 */
+/* Description : Rotation de 90Â° a droite du robot                                 */
 /* Inputs :                                                                          */
 /*      - void                                                                       */
 /* Output :                                                                          */
@@ -104,7 +104,7 @@ void Tourner_90_D();
 /*...................................................................................*/
 /* void Tourner_90_G()                                                              */
 /*...................................................................................*/
-/* Description : Rotation de 90° a gauche du robot                                      */
+/* Description : Rotation de 90Â° a gauche du robot                                      */
 /* Inputs :                                                                          */
 /*      - void                                                                       */
 /* Output :                                                                          */
@@ -128,7 +128,7 @@ void Reculer(unsigned int vM, unsigned int vA);
 /*...................................................................................*/
 /* void Stop_voiture()                                                               */
 /*...................................................................................*/
-/* Description : Permet au robot de s'arrêter                                      */
+/* Description : Permet au robot de s'arrÃªter                                      */
 /* Inputs :                                                                          */
 /*      - void                                                                       */
 /* Output :                                                                          */
