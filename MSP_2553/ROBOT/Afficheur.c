@@ -193,7 +193,7 @@ int convert_digit(int value)                       // fonction de conversion en 
 {
 	int valTens=0;
 
-	if(value<=9) valTens = value +0x30;          // pour les unités
+	if(value<=9) valTens = value +0x30;          // pour les unitÃ©s
 
     else valTens = value +0x37;                  // pour les nombres > 9
 
@@ -216,11 +216,11 @@ void convert_ASCII(int c, unsigned char hexa[4])
 
 	int digit1,digit2,digit3,digit4;
 
-	digit4= c & ( 0x000F);                     //  décalage de bit selon le digit
+	digit4= c & ( 0x000F);                     //  dÃ©calage de bit selon le digit
 	digit3=(c & ( 0x00F0))>>0x04;
 	digit2=(c & ( 0x0F00))>>0x08;
 	digit1=(c & ( 0xF000))>>0x0C;
-	hexa[3]=convert_digit(digit4);		  // placement dans un tableau de 4 caractères + conversion
+	hexa[3]=convert_digit(digit4);		  // placement dans un tableau de 4 caractÃ¨res + conversion
 	hexa[2]=convert_digit(digit3);
 	hexa[1]=convert_digit(digit2);
 	hexa[0]=convert_digit(digit1);
@@ -268,11 +268,11 @@ void Aff_valeur(int c)
 	unsigned char v[4];
 
 
-	digit4= c & ( 0x000F);                     //  décalage de bit selon le digit
+	digit4= c & ( 0x000F);                     //  dÃ©calage de bit selon le digit
 	digit3=(c & ( 0x00F0))>>0x04;
 	digit2=(c & ( 0x0F00))>>0x08;
 	digit1=(c & ( 0xF000))>>0x0C;
-	v[3]=(digit4);			           // placement dans un tableau de 4 caractères + conversion
+	v[3]=(digit4);			           // placement dans un tableau de 4 caractÃ¨res + conversion
 	v[2]=(digit3);
 	v[1]=(digit2);
 	v[0]=(digit1);
