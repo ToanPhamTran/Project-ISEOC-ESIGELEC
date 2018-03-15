@@ -30,32 +30,39 @@ void Stop(){
 
 }
 // rotation jusqu'a l'angle 90°
-void Droit_90(){
-	TACCR1 = 1465;
+void Droit_135(){
+	TACCR1 = 2000;
 }
 // rotation jusqu'a l'angle 0°
 void Gauche_0(){
-	TACCR1 = 500;
+	TACCR1 = 1000;
 }
 // rotation jusqu'a l'angle 180°
-void Droit_180(){
-	TACCR1=2500;
+//void Droit_180(){
+//	TACCR1=2500;
 }
 int main(void) {
 
     WDTCTL = WDTPW | WDTHOLD;   // Stop watchdog timer
 
 
-    Init_Servo();
-    Init_Clock();
-    Init_Timer();
-    Droit_90();                   //Faire une boucle avec balayage en utilisant les 3 fonctions ci-dessus
-      while(1);
+ Init_Clock();               // Appel des fonctions d'initialisation
+Init_Servo();
+Init_Timer();
+while(1){
+
+    Gauche_45();          // Appel des fonctions de rotations de 45 a 135
+    __delay_cycles(500000);
+     Droit_135();
+    __delay_cycles(500000);
+ 
 
 
 
 
 
+
+}
 
 }
 
