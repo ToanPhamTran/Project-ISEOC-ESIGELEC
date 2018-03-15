@@ -48,7 +48,7 @@ int main (void)
 		}
 
 	tourner_gauche();
-	for(i=0; i<22; i++) //timer pour tourner à 90° gauche --> 22
+	for(i=0; i<22; i++) //timer pour tourner Ã  90Â° gauche --> 22
 	{
 				Attente_Timer0();
 			}
