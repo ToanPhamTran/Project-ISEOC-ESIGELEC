@@ -81,7 +81,7 @@ void fonctionRobot()
 
 	}while(tension!=327);
 
-	if(tension == 327)//tension pour une distance à 8cm
+	if(tension == 327)//tension pour une distance Ã  8cm
 		{
 		Arret_robot();
 		_delay_cycles(400000);
@@ -96,7 +96,7 @@ void fonctionRobot()
 			tension=detection_distance(5);
 		}while(tension!=614);
 
-	 if(tension == 614) //tension pour une distance à 4cm
+	 if(tension == 614) //tension pour une distance Ã  4cm
 			{
 				Arret_robot();
 				TA1CCR0 = 0;
