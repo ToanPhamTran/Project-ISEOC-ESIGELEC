@@ -30,17 +30,24 @@ void Stop(){
 
 }
 // rotation jusqu'a l'angle 90°
-void Droit_135(){
+void angle_135(){
 	TACCR1 = 2000;
 }
 // rotation jusqu'a l'angle 0°
-void Gauche_0(){
-	TACCR1 = 1000;
+void angle_0(){
+	TACCR1 = 500;
 }
 // rotation jusqu'a l'angle 180°
-//void Droit_180(){
-//	TACCR1=2500;
+void angle_180(){
+	TACCR1=2500;
 }
+void angle_45(){
+	TACCR1=1000;
+}
+void angle_90(){
+	TACCR1=1500;
+}
+void
 int main(void) {
 
     WDTCTL = WDTPW | WDTHOLD;   // Stop watchdog timer
@@ -51,10 +58,16 @@ Init_Servo();
 Init_Timer();
 while(1){
 
-    Gauche_45();          // Appel des fonctions de rotations de 45 a 135
+    angle_0();          // Appel des fonctions de rotations de 45 a 135
     __delay_cycles(500000);
-     Droit_135();
+     angle_45();
     __delay_cycles(500000);
+	angle_90();
+	 __delay_cycles(500000);
+	angle_135();
+	 __delay_cycles(500000);
+	angle_180();
+	 __delay_cycles(500000);
  
 
 
