@@ -48,8 +48,10 @@ void Reculer_robot(void);
 
 void Arret_robot(void);
 
-int detection_obstacle();
+int detection_obstacle(int capt);
 
-int detection_distance();
+int capteur();
+
+int detection_distance(int tension);
 
 
