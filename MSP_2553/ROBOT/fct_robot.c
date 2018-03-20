@@ -17,8 +17,8 @@ void Init_PWM ()
 	TA1CCTL1 |= OUTMOD_7;
 	TA1CCTL2 |= OUTMOD_7;
 	TA1CCR0 = 1000;
-	TA1CCR1 = 100;
-	TA0CCR2 = 100;
+	TA1CCR1 = 0;
+	TA0CCR2 = 0;
 }
 
 void Init_Port()
@@ -53,7 +53,7 @@ void Init_capteur()
 {
 /// mesure avec le capteur
    P1DIR &= ~BIT1;
-   P1DIR &= ~BIT5;
+   P1DIR &= ~BIT3;
    ADC_init();
 
 }
@@ -100,6 +100,8 @@ void Avancer_robot()
 	TA1CCR2 = 600; //vitesse de base de la roue droite(B)
 
 }
+
+
 void Tourner_gauche()
 {
 	int i;
@@ -109,7 +111,7 @@ void Tourner_gauche()
 	//Sens_moteurB(1);
 	P2OUT |=  BIT5;
 
-	for(i=0; i<22; i++) //timer pour tourner à gauche (90°)
+	for(i=22; i>0; i--) //timer pour tourner à gauche (90°)
 		{
 			Attente_Timer0();
 		}
@@ -124,12 +126,19 @@ void Tourner_droite()
 	Sens_moteurA(0) ; // sens avant moteur A
 	//P2OUT &=~ BIT5;
 	Sens_moteurB(0); // inverse sens de moteur B
-	for(i=0; i<18; i++) //timer pour tourner à droite (90°)
+	for(i=18; i>0; i--) //timer pour tourner à droite (90°)
 	{
 		Attente_Timer0();
 	}
 	Arret_robot();
 }
+
+void Arret_robot()
+{
+	TA1CCR1=0 ; //vitesse de base de la roue gauche
+	TA1CCR2=0; //vitesse de base de la roue droite
+}
+
 
 void Reculer_robot()
 {
@@ -141,30 +150,46 @@ void Reculer_robot()
 
 }
 
-void Arret_robot()
-{
-	TA1CCR1=0 ; //vitesse de base de la roue gauche
-	TA1CCR2=0; //vitesse de base de la roue droite
-}
+
 
 int detection_obstacle(int capt)
 {
-	int valeurIR;
-	int obst =0;
-	int valeurSeuilIR = 0x294;
-
-	ADC_Demarrer_conversion(capt);
-	valeurIR = ADC_Lire_resultat();
-	if (valeurIR>valeurSeuilIR)
-		{
-			obst=1;
-
-		}
+	int tension;
+	int obst;
+	do
+	{
+		Avancer_robot();
+		tension=detection_distance(capt);
+	}while(tension!=614);
+	if(tension ==614)
+	{
+		Arret_robot();
+		obst=1;
+	}
 	else
-		{
-			obst=0;
-		}
+	{
+		obst =0;
+	}
+
 	return obst;
+}
+
+int capteur()
+{
+	int tension ;
+	int obst;
+	tension=detection_distance(3);
+	if(tension ==614)
+		{
+			//Arret_robot();
+			obst=1;
+		}
+		else
+		{
+			obst =0;
+		}
+
+		return obst;
 }
 
 int detection_distance(int distance_capt)
@@ -174,6 +199,7 @@ int detection_distance(int distance_capt)
 	tension=ADC_Lire_resultat();
 	return tension;
 }
+
 
 
 
