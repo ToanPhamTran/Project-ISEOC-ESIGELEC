@@ -2,20 +2,13 @@
  * uart.h
  *
  *  Created on: 8 mars 2018
- *      Author: t.phamtran.14
+ *  Author: t.phamtran.14
  */
+#ifndef UART
+#define UART
 
-// library use in this program
+//Librairie utilise dans ce programme
 #include <msp430.h>
-
-// Description : Fonction permettant d'initialiser les ports qui seront utilises par le mode UART
-//Inputs :
-//        - void
-//Outputs :
-//         -void
-//***********************************************************************************************
-
-void InitUartPort();
 
 // Description : Fonction permettant d'initialiser les registres qui seront utilises par le mode UART
 //Inputs :
@@ -24,7 +17,7 @@ void InitUartPort();
 //         -void
 //****************************************************************************************************
 
-void InitUART();
+void Init_UART();
 
 // Description : Fonction permettant de transmettre un caractere via UART
 //Inputs :
@@ -37,7 +30,7 @@ void TXdata (unsigned char c);
 
 // Description : Fonction permettant de recevoir un caractre via UART
 //Inputs :
-//        - unsigned char c : le caractere reçu
+//        - unsigned char c : le caractere reÃ§u
 //Outputs :
 //         -void
 //*************************************************************************
@@ -53,3 +46,5 @@ unsigned char RXdata();
 //*****************************************************************************
 
 void afficher_caract(char *point, int taille);
+
+#endif
