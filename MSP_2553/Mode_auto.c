@@ -1,18 +1,20 @@
-// main programm for testing the uart mode with the spi mode
+// description : programme pour le mode autonome du robot
 // autor : Toan pham Tran
 // date : 13/03/2018
-//project : ISE-OC
+// project : ISE-OC
 
-// library use in this program
+// Librairie utilise dans ce programme
 #include <msp430.h>
 #include "spi_mode_master.h"
 #include "uart.h"
 #include <string.h>
 #include <stdio.h>
 #include"fct_robot.h"
+
 /*
  * main.c
  */
+
 void Mode_auto()
 {
 
@@ -40,9 +42,9 @@ void Mode_auto()
         		Avancer_robot();
         	}
         	if (position == 1 )
-				{
+		{
         		Tourner_gauche();
-				}
+		}
 
     	}
 
