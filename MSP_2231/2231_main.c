@@ -53,33 +53,4 @@ __interrupt void SPI_slave (void)
 		P1OUT &=~BIT0;
 	}
 }
-/*int main(void) {
 
-    WDTCTL = WDTPW | WDTHOLD;   // Stop watchdog timer
-
-
- Init_Clock();               // Appel des fonctions d'initialisation
-Init_Servo();
-Init_Timer();
-while(1){
-
-    angle_0();          // Appel des fonctions de rotations de 45 a 135
-    __delay_cycles(500000);
-     angle_45();
-    __delay_cycles(500000);
-	angle_90();
-	 __delay_cycles(500000);
-	angle_135();
-	 __delay_cycles(500000);
-	angle_180();
-	 __delay_cycles(500000);
-
-
-
-
-
-
-
-}
-
-}*/
