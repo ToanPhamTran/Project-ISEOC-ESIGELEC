@@ -1,3 +1,8 @@
+/*
+* @autor : Toan PHAM TRAN & Quentin BLAZEJEWSKI
+* @description : Main programme pour le MSP 2231 permettant de piloter le servo moteur
+*/
+
 #include <msp430.h> 
 #include "spi_mode_slave.h"
 #include "servo.h"
@@ -18,7 +23,7 @@ int main(void)
 	 Init_Slave();
 	 Init_Servo();
 	 Init_Timer();
-    __enable_interrupt();
+         __enable_interrupt();
 }
 
 #pragma vector =USI_VECTOR
@@ -53,4 +58,3 @@ __interrupt void SPI_slave (void)
 		P1OUT &=~BIT0;
 	}
 }
-
