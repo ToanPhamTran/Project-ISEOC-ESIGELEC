@@ -8,6 +8,12 @@
 #ifndef AUTO
 #define AUTO
 
+// Description : Fonction pour le mode autonome du robot. 
+//Inputs :
+//        - none
+//Outputs :
+//         - non 
+//****************************************************************************
 void Mode_auto(void);
 
 #endif
