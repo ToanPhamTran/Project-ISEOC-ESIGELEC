@@ -4,6 +4,9 @@
  *  Created on: 8 mars 2018
  *      Author: t.phamtran.14
  */
+#ifndef SPI_2553
+#define SPI_2553
+
 #include "msp430.h"
 
 // Description : Fonction permettant d'initialiser les ports qui seront utilises pour le mode SPI du maitre
@@ -35,12 +38,12 @@ void TX_SPI(unsigned char c);
 
 // Description : Fonction permettant de recevoir un caractre via UART
 //Inputs :
-//        - unsigned char c : le caractere reçu
+//        - unsigned char c : le caractere reÃ§u
 //Outputs :
 //         -void
 //*************************************************************************
 
 void RX_SPI(unsigned char c);
 
-
+#endif
 
