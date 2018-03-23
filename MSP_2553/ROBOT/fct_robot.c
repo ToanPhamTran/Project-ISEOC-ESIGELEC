@@ -150,30 +150,6 @@ void Reculer_robot()
 
 }
 
-
-
-int detection_obstacle(int capt)
-{
-	int tension;
-	int obst;
-	do
-	{
-		Avancer_robot();
-		tension=detection_distance(capt);
-	}while(tension!=614);
-	if(tension ==614)
-	{
-		Arret_robot();
-		obst=1;
-	}
-	else
-	{
-		obst =0;
-	}
-
-	return obst;
-}
-
 int capteur()
 {
 	int tension ;
