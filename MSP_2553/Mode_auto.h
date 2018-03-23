@@ -5,7 +5,12 @@
  *      Author: t.phamtran.14
  */
 
+#ifndef AUTO
+#define AUTO
+
 void Mode_auto(void);
+
+#endif
 
 
 
