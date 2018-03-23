@@ -1,12 +1,17 @@
+/*
+* @autor : Toan PHAM TRAN & Quentin BLazejewski
+* @description : main programme pour le projet SAMROBOT
+*/
+
 #include <msp430.h> 
 #include "uart.h"
 #include "fct_robot.h"
 #include <string.h>
 #include <stdio.h>
 #include "Mode_auto.h"
-//**********************************
-// main.c 
-//************************************
+/*
+*main.c 
+*/
 void main()
 {
 
@@ -14,9 +19,9 @@ void main()
 	WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
 	BCSCTL1 = CALBC1_1MHZ;      // Set DCO to 1Mhz
 	DCOCTL = CALDCO_1MHZ;       // Set DCO to 1Mhz
-	//**********************************
-	// Initialisation des registres et des ports pour l'UART & pour le robot
-	//************************************
+	/*
+	*Initialisation des registres et des ports pour l'UART & pour le robot
+	*/
         Init_Port();
         Init_PWM();
 	Init_UART();
