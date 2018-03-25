@@ -22,7 +22,7 @@ void InitUART()
         UCA0CTL1 |= UCSSEL_2;                   // SMCLK
 
         /*
-         * Register UCAxBRx : register for CLK =F/d»bit
+         * Register UCAxBRx : register for CLK =F/d√àbit
          * UCA0BR0 is initialized
          */
         UCA0BR0 = 104;                          // frequency = 1MHz,  baud = 9600
