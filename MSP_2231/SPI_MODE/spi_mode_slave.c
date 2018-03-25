@@ -2,7 +2,7 @@
  * spi_mode_slave.c
  *
  *  Created on: 8 mars 2018
- *      Author: t.phamtran.14
+ *      Author: Toam Pham Tram, Blazejewski Quentin
  */
 #include <msp430.h>
 #include "spi_mode_slave.h"
@@ -11,9 +11,9 @@
  {
 	 P1DIR |= BIT0 ;
 	 P1OUT &=~ BIT0;
-	 //P1DIR &=~BIT4;
+	
 	 P1SEL |= BIT6 + BIT7 + BIT5;
-	 //P1SEL2 = BIT6 + BIT7 + BIT5;
+	 P1SEL2 = BIT6 + BIT7 + BIT5;
  }
 void initSlave()
 {
