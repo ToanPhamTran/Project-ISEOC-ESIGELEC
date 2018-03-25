@@ -16,10 +16,10 @@ void initMaster()
 {
       //*****************************
       // initialisation des registres
-      // la polarité et la phase est configuré par le registre UCCKPL
-      // Initialalisation des registres à 1
+      // la polaritÃ© et la phase est configurÃ© par le registre UCCKPL
+      // Initialalisation des registres Ã  1
       // UCMSB on configure le sens de direction de l'envoie ici MSB en premier
-      //UCMST : on selectionne le mode maitre à 1, 0 pour le l'esclave.
+      //UCMST : on selectionne le mode maitre Ã  1, 0 pour le l'esclave.
       //UCSYNC synchronous mode
 
       UCB0CTL0 |= UCCKPL + UCMSB + UCMST + UCSYNC;  // 3-pin, 8-bit SPI master
