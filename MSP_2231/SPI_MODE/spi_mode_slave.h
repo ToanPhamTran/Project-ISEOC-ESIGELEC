@@ -4,6 +4,9 @@
  *  Created on: 8 mars 2018
  *      Author: t.phamtran.14
  */
+#ifndef SPI_2231
+#define SPI_2231
+
 #include "msp430.h"
 
 // Description : Fonction qui permet d'initialiser les lignes du Port 1 correspondant au protocole du SPI mode
@@ -32,5 +35,5 @@ void initSlave();
 unsigned char RXSlaveSPI ();
 
 
-
+#endif
 
