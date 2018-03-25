@@ -1,5 +1,13 @@
+/*
+ * Servomoteur_2231.c
+ *
+ *  Created on: 8 mars 2018
+ *      Author: q.blazejewski.14
+ */
+
+
 #include <msp430.h> 
-//#include <Servomoteur_2231.h>
+#include <Servomoteur_2231.h>
 
 
 //**********************Rotation Servomoteur*********************************
