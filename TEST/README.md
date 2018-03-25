@@ -1,1 +1,1 @@
-Description : Fichier regroupant les codes sources des codes test pour le MSP2552. 
+Description : Fichier regroupant les codes sources des codes test pour le MSP2553. 
