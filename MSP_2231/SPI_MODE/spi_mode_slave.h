@@ -6,6 +6,14 @@
  */
 #include "msp430.h"
 
+// Description : Fonction qui permet d'initialiser les lignes du Port 1 correspondant au protocole du SPI mode
+//Inputs :
+//        - void
+//Outputs :
+//         -void
+//****************************************************************************
+void initPort();
+
 // Description : fonction permettant d'initialiser les ports et les registres du slave
 //Inputs :
 //        - unsigned char c : le caractere transmis
