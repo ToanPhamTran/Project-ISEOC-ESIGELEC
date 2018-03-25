@@ -5,7 +5,8 @@
  *      Author: q.blazejewski.14
  */
 
-
+#ifndef Servo
+#define Servo
 
 
 
@@ -106,5 +107,5 @@ void angle_135();
 void angle_180();
 
 
-
+#endif
 
