@@ -6,6 +6,10 @@
  */
 #ifndef UART
 #define UART
+typedef unsigned char UCHAR;
+typedef char CHAR;
+
+
 
 //Librairie utilise dans ce programme
 #include <msp430.h>
@@ -17,7 +21,7 @@
 //         -void
 //****************************************************************************************************
 
-void Init_UART();
+void Init_UART(void);
 
 // Description : Fonction permettant de transmettre un caractere via UART
 //Inputs :
@@ -26,7 +30,7 @@ void Init_UART();
 //         -void
 //****************************************************************************
 
-void TXdata (unsigned char c);
+void TXdata (UCHAR c);
 
 // Description : Fonction permettant de recevoir un caractre via UART
 //Inputs :
@@ -35,7 +39,7 @@ void TXdata (unsigned char c);
 //         -void
 //*************************************************************************
 
-unsigned char RXdata();
+UCHAR RXdata(void);
 
 // Description : Fonction permettant d'afficher une chaine de caractere
 //Inputs :
@@ -45,6 +49,6 @@ unsigned char RXdata();
 //         -void
 //*****************************************************************************
 
-void afficher_caract(char *point, int taille);
+void afficher_caract(CHAR *point, int taille);
 
 #endif
